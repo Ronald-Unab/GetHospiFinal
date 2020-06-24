@@ -20,7 +20,7 @@ namespace ProyectoGetHospi.Controladores
 
         public void Actualizar(Usuarios u)
         {
-
+            musuarios.Actualizar(u);
         }
 
         public List<Usuarios> Listado()
@@ -30,7 +30,7 @@ namespace ProyectoGetHospi.Controladores
 
         public void Eliminar(int id)
         {
-
+            musuarios.Eliminar(id);
         }
     }
 }

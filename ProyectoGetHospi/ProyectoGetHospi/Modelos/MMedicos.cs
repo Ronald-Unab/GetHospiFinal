@@ -15,6 +15,20 @@ namespace ProyectoGetHospi.Modelos
         {
             IDbConnection cn = Conexion.Conexion.Conectar();
             cn.Open();
+            DynamicParameters parametro = new DynamicParameters();
+            parametro.Add("@Nombre", m.Nombre, DbType.String);
+            parametro.Add("@Direccion", m.Direccion, DbType.String);
+            parametro.Add("@DUI", m.DUI, DbType.String);
+            parametro.Add("@Telefono", m.Telefono, DbType.String);
+            parametro.Add("@CedulaMedico", m.CedulaMedico, DbType.Int32);
+            cn.Execute("sp_insert_Medicos", parametro, commandType: CommandType.StoredProcedure);
+            cn.Close();
+        }
+
+        public void Actualizar(Médico m)
+        {
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            cn.Open();
 
             DynamicParameters parametro = new DynamicParameters();
             parametro.Add("@Nombre", m.Nombre, DbType.String);
@@ -22,13 +36,8 @@ namespace ProyectoGetHospi.Modelos
             parametro.Add("@DUI", m.DUI, DbType.String);
             parametro.Add("@Telefono", m.Telefono, DbType.String);
             parametro.Add("@CedulaMedico", m.CedulaMedico, DbType.Int32);
-            cn.Execute("sp_Select_Medicos", parametro, commandType: CommandType.StoredProcedure);
+            cn.Execute("sp_update_Medicos", parametro, commandType: CommandType.StoredProcedure);
             cn.Close();
-        }
-
-        public void Actualizar(Médico m)
-        {
-
         }
 
         public List<Médico> Listado()
@@ -42,7 +51,10 @@ namespace ProyectoGetHospi.Modelos
 
         public void Eliminar(int id)
         {
-
+            DynamicParameters parametro = new DynamicParameters();
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            parametro.Add("@IdMedico", id);
+            cn.Execute("sp_delete_Medicos", parametro, commandType: CommandType.StoredProcedure);
         }
     }
 }
