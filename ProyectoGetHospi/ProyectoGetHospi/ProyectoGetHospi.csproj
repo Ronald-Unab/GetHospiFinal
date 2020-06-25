@@ -70,17 +70,35 @@
     <Compile Include="Logueo.Designer.cs">
       <DependentUpon>Logueo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ActualizarA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ActualizarA.Designer.cs">
+      <DependentUpon>ActualizarA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ActualizarMed.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\ActualizarMed.Designer.cs">
       <DependentUpon>ActualizarMed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\ActualizarP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ActualizarP.Designer.cs">
+      <DependentUpon>ActualizarP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\ActualizarU.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\ActualizarU.Designer.cs">
       <DependentUpon>ActualizarU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EliminarA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EliminarA.Designer.cs">
+      <DependentUpon>EliminarA.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\EliminarMed.cs">
       <SubType>Form</SubType>
@@ -157,6 +175,12 @@
     <Compile Include="Vista\fUsuarios.Designer.cs">
       <DependentUpon>fUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\RegistrarA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\RegistrarA.Designer.cs">
+      <DependentUpon>RegistrarA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\RegistrarMed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,11 +202,20 @@
     <EmbeddedResource Include="Logueo.resx">
       <DependentUpon>Logueo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ActualizarA.resx">
+      <DependentUpon>ActualizarA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ActualizarMed.resx">
       <DependentUpon>ActualizarMed.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ActualizarP.resx">
+      <DependentUpon>ActualizarP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\ActualizarU.resx">
       <DependentUpon>ActualizarU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EliminarA.resx">
+      <DependentUpon>EliminarA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\EliminarMed.resx">
       <DependentUpon>EliminarMed.cs</DependentUpon>
@@ -225,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\fUsuarios.resx">
       <DependentUpon>fUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\RegistrarA.resx">
+      <DependentUpon>RegistrarA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\RegistrarMed.resx">
       <DependentUpon>RegistrarMed.cs</DependentUpon>

@@ -43,7 +43,8 @@ namespace ProyectoGetHospi.Vista
 
         private void actualizarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ActualizarP AP = new ActualizarP();
+            AP.Show();
         }
 
         private void eliminarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
