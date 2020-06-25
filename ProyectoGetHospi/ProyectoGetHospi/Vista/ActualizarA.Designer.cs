@@ -34,13 +34,7 @@
             System.Windows.Forms.Label pesoLabel;
             System.Windows.Forms.Label presionArterialLabel;
             System.Windows.Forms.Label temperaturaLabel;
-            this.archivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.archivoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -49,19 +43,21 @@
             this.pesoTextBox = new System.Windows.Forms.TextBox();
             this.presionArterialTextBox = new System.Windows.Forms.TextBox();
             this.temperaturaTextBox = new System.Windows.Forms.TextBox();
+            this.archivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             idArchivoLabel = new System.Windows.Forms.Label();
             idPacienteLabel = new System.Windows.Forms.Label();
             pesoLabel = new System.Windows.Forms.Label();
             presionArterialLabel = new System.Windows.Forms.Label();
             temperaturaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.archivoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.archivoDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.archivoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // archivoBindingSource
-            // 
-            this.archivoBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Archivo);
             // 
             // archivoDataGridView
             // 
@@ -82,41 +78,6 @@
             this.archivoDataGridView.ReadOnly = true;
             this.archivoDataGridView.Size = new System.Drawing.Size(458, 254);
             this.archivoDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdArchivo";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IdArchivo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Peso";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Peso";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PresionArterial";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PresionArterial";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Temperatura";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Temperatura";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "IdPaciente";
-            this.dataGridViewTextBoxColumn5.HeaderText = "IdPaciente";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -144,6 +105,7 @@
             this.btnSeleccionar.TabIndex = 3;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnGuardar
             // 
@@ -153,6 +115,7 @@
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // idArchivoLabel
             // 
@@ -239,6 +202,45 @@
             this.temperaturaTextBox.Size = new System.Drawing.Size(100, 20);
             this.temperaturaTextBox.TabIndex = 9;
             // 
+            // archivoBindingSource
+            // 
+            this.archivoBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Archivo);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdArchivo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdArchivo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Peso";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Peso";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PresionArterial";
+            this.dataGridViewTextBoxColumn3.HeaderText = "PresionArterial";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Temperatura";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Temperatura";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "IdPaciente";
+            this.dataGridViewTextBoxColumn5.HeaderText = "IdPaciente";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
             // ActualizarA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,10 +252,10 @@
             this.Controls.Add(this.archivoDataGridView);
             this.Name = "ActualizarA";
             this.Text = "Actualizar";
-            ((System.ComponentModel.ISupportInitialize)(this.archivoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.archivoDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.archivoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoGetHospi.Controladores;
 
 namespace ProyectoGetHospi.Vista
 {
@@ -15,6 +16,12 @@ namespace ProyectoGetHospi.Vista
         public EliminarA()
         {
             InitializeComponent();
+        }
+        CArchivos cArchivo = new CArchivos();
+
+        private void EliminarA_Load(object sender, EventArgs e)
+        {
+            archivoBindingSource.DataSource = cArchivo.Listado();
         }
     }
 }
