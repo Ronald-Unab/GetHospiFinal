@@ -60,7 +60,7 @@
             // 
             // usuariosBindingSource
             // 
-            this.usuariosBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Usuarios);
+//            this.usuariosBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Usuarios);
             // 
             // txtContra
             // 
@@ -73,7 +73,7 @@
             // 
             // usuariosBindingSource1
             // 
-            this.usuariosBindingSource1.DataSource = typeof(ProyectoGetHospi.Entidades.Usuarios);
+//            this.usuariosBindingSource1.DataSource = typeof(ProyectoGetHospi.Entidades.Usuarios);
             // 
             // lblContrasena
             // 
