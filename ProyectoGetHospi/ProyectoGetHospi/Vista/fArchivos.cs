@@ -21,14 +21,29 @@ namespace ProyectoGetHospi.Vista
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             
-            fMenu M = new fMenu();
-            M.Show();
-            Hide();
         }
 
         private void fArchivos_Load(object sender, EventArgs e)
         {
             archivoBindingSource.DataSource = mArchivos.Listado();
+        }
+
+        private void volverAlMenuPrincipalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fMenu M = new fMenu();
+            M.Show();
+            Hide();
+        }
+
+        private void recargarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registrarNuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistrarA RA = new RegistrarA();
+            RA.Show();
         }
     }
 }

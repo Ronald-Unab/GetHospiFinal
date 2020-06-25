@@ -15,7 +15,6 @@ namespace ProyectoGetHospi.Modelos
         {
             IDbConnection cn = Conexion.Conexion.Conectar();
             cn.Open();
-
             DynamicParameters parametro = new DynamicParameters();
             parametro.Add("@Nombre", p.Nombre, DbType.String);
             parametro.Add("@Direccion", p.Dirección, DbType.String);
@@ -27,7 +26,7 @@ namespace ProyectoGetHospi.Modelos
             parametro.Add("@NombrePadre", p.NombrePadre, DbType.String);
             parametro.Add("@NombreMadre", p.NombreMadre, DbType.String);
             parametro.Add("@GrupoSanguineo", p.GrupoSanguineo, DbType.String);
-            cn.Execute("sp_Select_Pacientes", parametro, commandType: CommandType.StoredProcedure);
+            cn.Execute("sp_insert_Pacientes", parametro, commandType: CommandType.StoredProcedure);
             cn.Close();
         }
 
@@ -47,7 +46,10 @@ namespace ProyectoGetHospi.Modelos
 
         public void Eliminar(int id)
         {
-
+            DynamicParameters parametro = new DynamicParameters();
+            IDbConnection cn = Conexion.Conexion.Conectar();
+            parametro.Add("@IdPaciente", id);
+            cn.Execute("sp_delete_Pacientes", parametro, commandType: CommandType.StoredProcedure);
         }
     }
 }

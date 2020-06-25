@@ -30,7 +30,7 @@ namespace ProyectoGetHospi.Controladores
 
         public void Eliminar(int id)
         {
-
+            mpacientes.Eliminar(id);
         }
     }
 }
