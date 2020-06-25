@@ -152,7 +152,7 @@
             // 
             // pacientesBindingSource
             // 
-            this.pacientesBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Pacientes);
+           this.pacientesBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Pacientes);
             // 
             // btnEliminarP
             // 

@@ -204,7 +204,7 @@
             // 
             // archivoBindingSource
             // 
-            this.archivoBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Archivo);
+//            this.archivoBindingSource.DataSource = typeof(ProyectoGetHospi.Entidades.Archivo);
             // 
             // dataGridViewTextBoxColumn1
             // 
